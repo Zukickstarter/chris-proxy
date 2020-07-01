@@ -8,6 +8,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Pledges from './pledges_component/components/App.jsx';
+import Description from './description_component/App.jsx';
 
 let params = new URLSearchParams(window.location.search);
 let id = params.get("id")
@@ -16,5 +17,6 @@ if (id === null) {
 };
 
 
+ReactDOM.render(<Description id={id} />, document.getElementById('description'));
 ReactDOM.render(<Pledges id={id} />, document.getElementById('pledges'));
 
