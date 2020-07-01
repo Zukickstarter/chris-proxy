@@ -16,7 +16,14 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env', '@babel/preset-react'],
-              // plugins: ["babel-plugin-styled-components", "@babel/plugin-transform-runtime"]
+              plugins: [
+                '@babel/plugin-transform-runtime',
+                '@babel/plugin-proposal-class-properties',
+                'babel-plugin-styled-components'
+              ],
+              // nicolas had these
+              // plugins: ['@babel/plugin-proposal-class-properties'],
+              // plugins: ['babel-plugin-styled-components']
             }
           },
         ]
@@ -27,7 +34,20 @@ module.exports = {
         use: [
           'style-loader', 'css-loader'
         ]
-      }
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              limit: 10000,
+              mimetype: 'application/font-woff',
+            },
+          },
+        ],
+      },
     ]
   },
   resolve: {
