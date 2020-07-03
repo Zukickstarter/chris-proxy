@@ -5,6 +5,10 @@
   <style>
     #app {
       display: flex;
+      flex-direction: column;
+    }
+    #bottom-section {
+      display: flex;
       flex-direction: row;
     }
   </style>
@@ -14,11 +18,13 @@
     <div>
       <div id="photos"></div>
     </div>
-    <div>
-      <div id="description"></div>
-    </div>
-    <div>
-      <div id="pledges"></div>
+    <div id="bottom-section">
+      <div>
+        <div id="description"></div>
+      </div>
+      <div>
+        <div id="pledges"></div>
+      </div>
     </div>
   </div>
   <script src="bundle.js"></script>

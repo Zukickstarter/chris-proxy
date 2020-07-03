@@ -20,7 +20,7 @@ if (id === null) {
   id = 1;
 };
 
-// ReactDOM.render(<Photos id={id} />, document.getElementById('photos'));
+ReactDOM.render(<Photos id={id} />, document.getElementById('photos'));
 ReactDOM.render(<Description id={id} />, document.getElementById('description'));
 ReactDOM.render(<Pledges id={id} />, document.getElementById('pledges'));
 
